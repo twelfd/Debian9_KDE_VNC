@@ -5,9 +5,9 @@ Description=Manage VNC Server
 
 [Service]
 Type=forking
-ExecStart=/usr/local/bin/vncss.service start
-ExecStop=/usr/local/bin/vncss.service stop
-ExecReload=/usr/local/bin/vncss.service restart
+ExecStart=/usr/local/bin/vncss.sh start
+ExecStop=/usr/local/bin/vncss.sh stop
+ExecReload=/usr/local/bin/vncss.sh restart
 User=<user>
 
 [Install]
