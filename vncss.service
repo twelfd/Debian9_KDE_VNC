@@ -1,0 +1,14 @@
+#Location: /lib/systemd/system/vncss.service
+
+[Unit]
+Description=Manage VNC Server
+
+[Service]
+Type=forking
+ExecStart=/usr/local/bin/vncss.service start
+ExecStop=/usr/local/bin/vncss.service stop
+ExecReload=/usr/local/bin/vncss.service restart
+User=<user>
+
+[Install]
+WantedBy=multi-user.target
