@@ -1,0 +1,13 @@
+#Location: /etc/vnc/xstartup
+
+#!/bin/sh
+
+unset SESSION_MANAGER
+unset DBUS_SESSION_BUS_ADDRESS
+
+xrdb $HOME/.Xresources
+xsetroot -solid grey
+
+export XKL_XMODMAP_DISABLE=1
+startkde &
+#gnome-session &
