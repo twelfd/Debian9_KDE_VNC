@@ -1,32 +1,30 @@
 # Debian9_KDE_VNC
-#Config files for Debian9, KDE working with VNC over SSH tunnel
+#Config files for Debian9, KDE working with VNC over SSH tunnel\
 #Default display is serverip:2 (eg: 192.168.1.5:2)
 
-#Enable booting to Desktop:
-systemctl set-default graphical.target
+#Enable booting to Desktop:\
+systemctl set-default graphical.target 
 
-#Boot to cmd:
-systemctl set-default multi-user.target
+#Boot to cmd:\
+systemctl set-default multi-user.target 
 
-#Enable on boot:
-systemctl vncss enable
+#Enable on boot:\
+systemctl vncss enable 
 
-#Control VNC service:
+#Control VNC service:\
 service vncss start | stop | restart
 
-#Cannot open display:2 errors via VNC:
+#Cannot open display:2 errors via VNC:\
 xhost +local:
 
-#Run Dolphin as root:
+#Run Dolphin as root:\
 pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY KDE_SESSION_VERSION=5 KDE_FULL_SESSION=true dolphin
 
-#Create system user for apps (no login):
-useradd -s /bin/false -d /var/lib/<USER>/ -r -m -U <USER>
+#Create system user for apps (no login):\
+useradd -s /bin/false -d /var/lib/USER/ -r -m -U USER 
   
-#Find port being listened on:
+#Find port being listened on:\
 netstat -tlpn | grep 59
 
-#Find details of process using mount/file:
-fuser /media/<dir> | <file>
-  
-  
+#Find details of process using mount/file:\
+fuser /media/DIR | FILE
