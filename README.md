@@ -13,3 +13,20 @@ systemctl vncss enable
 
 #Control VNC service:
 service vncss start | stop | restart
+
+#Cannot open display:2 errors via VNC:
+xhost +local:
+
+#Run Dolphin as root:
+pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY KDE_SESSION_VERSION=5 KDE_FULL_SESSION=true dolphin
+
+#Create system user for apps (no login):
+useradd -s /bin/false -d /var/lib/<USER>/ -r -m -U <USER>
+  
+#Find port being listened on:
+netstat -tlpn | grep 59
+
+#Find details of process using mount/file:
+fuser /media/<dir> | <file>
+  
+  
