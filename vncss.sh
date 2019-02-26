@@ -1,5 +1,3 @@
-#Location: /usr/local/bin/vncss.sh
-
 #!/bin/bash
 
 PATH="$PATH:/usr/bin/"
