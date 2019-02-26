@@ -4,7 +4,7 @@
 Locations: \
 /lib/systemd/system/vncss.service \
 /usr/local/bin/vncss.sh \
-/etc/vnc/xstartup \
+/etc/vnc/xstartup 
 
 #Enable booting to Desktop:\
 systemctl set-default graphical.target 
