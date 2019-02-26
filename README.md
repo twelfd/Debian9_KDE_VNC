@@ -1,6 +1,10 @@
 # Debian9_KDE_VNC
 #Config files for Debian9, KDE working with VNC over SSH tunnel\
-#Default display is serverip:2 (eg: 192.168.1.5:2)
+#Default display is serverip:2 (eg: 192.168.1.5:2)\
+Locations: \
+/lib/systemd/system/vncss.service \
+/usr/local/bin/vncss.sh \
+/etc/vnc/xstartup \
 
 #Enable booting to Desktop:\
 systemctl set-default graphical.target 
