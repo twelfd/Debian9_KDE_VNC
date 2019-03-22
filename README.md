@@ -32,3 +32,9 @@ netstat -tlpn | grep 59
 
 #Find details of process using mount/file:\
 fuser /media/DIR | FILE
+
+#run as another user from a root shell:
+su - targetuser -s /bin/bash 
+
+#For direct command execution use -c:
+su - targetuser -s /bin/bash -c "/bin/echo hello world" 
